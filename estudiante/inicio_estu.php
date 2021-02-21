@@ -26,6 +26,13 @@
         <a href="../php/cerrarSesion.php">SALIR</a>
     </div>
 
+    <div class="evidencia">
+        <h3>TAREAS PENDIENTES</h3>
+        <form action="vertareas.php" method="POST">
+            <input type="submit" name="vertarea" value="ver tareas">
+        </form>
+    </div>
+
     
 </body>
 </html>
