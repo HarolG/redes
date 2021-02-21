@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profesor.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header"></header>
+    <div class="main">
+        <div class="addTask">
+            <div class="Tittle">
+                <h2>AGREGAR TAREA</h2>
+            </div>
+            <form class="formAdd" id="formAdd" enctype="multipart/form-data" method="POST">
+                <input type="text" class="nombre" id="addNombre" name="addNombre" placeholder="Nombre de la tarea">
+                <textarea rows="10" id="addDescripcion" name="addDescripcion" placeholder="Descripción" form="formAdd"></textarea>
+                <input type="file" class="archivo" name="addFile" id="addFile">
+                <input type="submit" class="btn_agregar" id="btn_agregar" value="Agregar">
+            </form>
+        </div>
+        <div class="listTask">
+            <div class="Tittle">
+                <h2>LISTA DE TAREAS</h2>
+            </div>
+        </div>
+        <div class="studendTask">
+            <div class="Tittle">
+                <h2>CALIFICAR</h2>
+            </div>
+        </div>
+    </div>
+    <script src="../js/profesor.js"></script>
+</body>
+</html>
