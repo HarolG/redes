@@ -64,11 +64,30 @@ $(document).ready(function () {
     $(document).on('click', '.task-rate', (e) => {
         const element = $(this)[0].activeElement.parentElement.parentElement;
         const id = $(element).attr('taskId');
+        mostrarCalificacion()
 
-        $.post("../php/mostrarCali.php", {id},
+        function mostrarCalificacion() {
+            $.post("../php/mostrarCali.php", {id},
               function (response) {
-                  alert(response)
-              }
-          );
+                const tasks = JSON.parse(response);
+                let plantilla = ''
+                tasks.forEach(task => {
+                    plantilla += `
+                    <div class="contenedorEstudiante">
+                        <p>Nombre completo: ${task.nombre} ${task.apellido}</p>
+                        <p>Documento: ${task.documento}</p>
+                        <p>ID Tarea: ${task.idHomework}</p>
+                        <p>Archivo: ${task.archivo}</p>
+                        <p>Nota: ${task.nota}</p>
+                        <input type="number" id="nota" name="nota" placeholder="Nota">
+                        <button id="" class="btnCalificar">Calificar</button>
+                    </div>
+                    `
+                });
+
+                $('#noc').html(plantilla);
+                }
+            );
+        }
     });
 });
