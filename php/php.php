@@ -13,6 +13,7 @@
         
         if($redes){
             
+            $_SESSION['documento'] = $redes['documento'];
             $_SESSION['user'] = $redes['user'];
             $_SESSION['password'] = $redes['password'];
             $_SESSION['Nombre'] = $redes['Nombre'];
@@ -27,7 +28,7 @@
             }
             
             elseif($_SESSION['tip_user'] == 2) { //Profesor
-                header("Location: ../profesor/inicio_profe.php");
+                header("Location: ../profesor/profesor.html");
                 exit();
             }
 
