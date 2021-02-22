@@ -150,3 +150,27 @@
 .listaTareas table tr th {
     background-color: beige;
 }
+
+.contenedorCalificar {
+    background-color: #5c5c5c;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.contenedorEstudiante {
+    width: calc(100% - 25px);
+    padding: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.contenedorEstudiante p {
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.frmCalificar {
+    margin-top: 5px;
+    background-color: transparent;
+}
